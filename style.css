@@ -1,0 +1,643 @@
+@import url("https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./img/sfondo1.jpg");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  font-family: "Rokkitt", serif;
+  overflow-y: hidden;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+header div {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
+
+header div .logo {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(3px 3px 1px rgba(26, 3, 3, 0.686));
+}
+
+header div .app_name {
+  font-family: "Cinzel Decorative", cursive;
+  filter: drop-shadow(3px 3px 1px rgba(26, 3, 3, 0.686));
+  color: white;
+}
+
+.miniCardSection {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow-y: auto;
+  margin: 10px;
+  height: 90px;
+}
+
+section .mini_CardContainer .mini_Card {
+  position: relative;
+  padding: 5px 8px;
+  color: #133d8d;
+  background-color: #fdf7f7;
+  width: 80px;
+  height: 50px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: all 0.35;
+}
+
+section .mini_CardContainer .mini_Card div {
+  display: flex;
+  flex-direction: column;
+}
+
+section .mini_CardContainer .mini_Card img {
+  filter: drop-shadow(3px 3px 1px rgba(26, 3, 3, 0.686));
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  justify-self: flex-end;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+main .map_container {
+  align-self: center;
+  height: 500px;
+  width: 555px;
+  color: rgb(65, 31, 4);
+  filter: drop-shadow(3px 3px 1px rgba(26, 3, 3, 0.686));
+  font-size: 1rem;
+  position: relative;
+}
+
+main .map_container .map {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(3px 3px 1px rgba(26, 3, 3, 0.686));
+}
+
+main .map_container .mapName {
+  font-family: "Marcellus SC", serif;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+main .map_container .provinces_name {
+  padding: 2px;
+  opacity: 0;
+  cursor: pointer;
+  width: 65px;
+  height: 22px;
+  transition: all 0.5s linear;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+main .map_container .provinces_name:hover {
+  font-family: "Rokkitt", serif;
+  opacity: 1;
+  box-shadow: 1px 0px 5px rgba(4, 1, 43, 0.686);
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(
+    34deg,
+    rgba(237, 122, 0, 0.959) 0%,
+    rgba(255, 176, 59, 1) 27%,
+    rgba(254, 225, 171, 0.978) 51%,
+    rgba(255, 255, 255, 1) 92%
+  );
+  transform: rotate(0deg);
+  border-radius: 7px;
+  color: #00153b;
+}
+
+main .map_container .provinces_name .first_row {
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.35s linear;
+}
+
+main .map_container .provinces_name .first_row .leftInfo {
+  padding: 4px;
+  width: 70%;
+}
+
+main .map_container .provinces_name .first_row .weatherIcon {
+  width: 50%;
+}
+
+main .map_container .provinces_name .first_row .weatherIcon img {
+  filter: drop-shadow(1px 7px 5px rgba(26, 3, 3, 0.686));
+  object-fit: cover;
+  width: 100%;
+  height: 75%;
+}
+
+main .map_container .provinces_name .first_row .leftInfo .degrees {
+  font-size: 3rem;
+}
+
+main .map_container .provinces_name.first_row .leftInfo .weatherDescription {
+  font-size: 1.2rem;
+}
+
+main .map_container .provinces_name .second_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 0.35s linear;
+}
+
+main .map_container .provinces_name .second_row img {
+  height: 33px;
+  width: 33px;
+  filter: drop-shadow(1px 7px 5px rgba(26, 3, 3, 0.686));
+}
+
+main .map_container .trapani,
+main .map_container .box1 {
+  position: fixed;
+  top: calc(50% - 9%);
+  left: calc(50% - 255px);
+}
+
+main .map_container .palermo,
+main .map_container .box2 {
+  position: fixed;
+  top: calc(50% - 50px);
+  left: calc(50% - 125px);
+}
+
+main .map_container .agrigento,
+main .map_container .box3 {
+  position: fixed;
+  top: calc(50% - -58px);
+  left: calc(50% - 112px);
+}
+
+main .map_container .messina,
+main .map_container .box4 {
+  position: fixed;
+  top: calc(50% - 84px);
+  right: calc(50% - 160px);
+}
+
+main .map_container .catania,
+main .map_container .box5 {
+  position: fixed;
+  top: calc(50% - -35px);
+  right: calc(50% - 164px);
+}
+
+main .map_container .enna,
+main .map_container .box6 {
+  position: fixed;
+  top: calc(50% - 5px);
+  right: calc(50% - 85px);
+}
+
+main .map_container .box6 {
+  width: 40px;
+}
+
+main .map_container .caltanissetta,
+main .map_container .box7 {
+  position: fixed;
+  top: calc(50% - -25px);
+  right: calc(50% - 35px);
+}
+
+main .map_container .box7 {
+  top: calc(50% - -20px);
+  width: 74px;
+}
+
+main .map_container .siracusa,
+main .map_container .box8 {
+  position: fixed;
+  bottom: calc(50% - 135px);
+  right: calc(50% - 200px);
+}
+
+main .map_container .ragusa,
+main .map_container .box9 {
+  position: fixed;
+  bottom: calc(50% - 170px);
+  right: calc(50% - 125px);
+}
+
+main .search_section {
+  display: flex;
+}
+
+.touristIconContainer {
+  position: relative;
+  position: relative;
+  bottom: 75px;
+  width: 125px;
+  height: 144px;
+  left: 3px;
+}
+
+main .search_section .touristIconContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(3px 3px 1px rgba(26, 3, 3, 0.686));
+}
+
+.quoteContainer {
+  position: absolute;
+  left: 150px;
+  bottom: 75px;
+  padding: 10px 20px;
+  background: white;
+  font-family: "Marcellus SC", serif;
+  font-weight: bold;
+  clear: both;
+  clip-path: polygon(
+    0 100%,
+    100% 100%,
+    100% 23%,
+    26% 23%,
+    0 1%,
+    14% 23%,
+    0 23%
+  );
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: 8px;
+}
+
+.selectContainer {
+  font-family: "Marcellus SC", serif;
+  text-align: center;
+  outline: none;
+  background-color: #ab2220;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 3px;
+  border-radius: 4px;
+  box-shadow: 0 0 4px #310303a1;
+  cursor: pointer;
+}
+
+.selectContainer option {
+  background-color: #ffffff;
+  color: #710605;
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.active {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.modal .resultContainer {
+  width: 350px;
+  height: 570px;
+  color: white;
+  background-color: #efe3cb;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgb(0 0 0 / 43%), rgb(0 0 0 / 83%));
+}
+
+.modal .resultContainer .firstHalf .first_row img {
+  position: absolute;
+  width: 200px;
+  top: 0;
+  right: 0;
+  filter: drop-shadow(5px 4px 3px rgba(26, 3, 3, 0.686));
+}
+
+.modal .resultContainer .firstHalf .first_row .leftInfo {
+  margin: 15px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 20px 5px 20px;
+}
+
+.modal .resultContainer .firstHalf .first_row .leftInfo .cityNameCard {
+  font-size: 1.3rem;
+}
+
+.modal .resultContainer .firstHalf .first_row .leftInfo .degrees {
+  font-size: 5rem;
+}
+.modal .resultContainer .firstHalf .first_row .leftInfo .weatherDescription {
+  font-weight: bold;
+}
+.modal .resultContainer .firstHalf .first_row .leftInfo .weatherDescription {
+  font-size: 1.2rem;
+}
+
+.modal .resultContainer .firstHalf .second_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ff9e83dd;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+}
+
+.modal .resultContainer .firstHalf .second_row div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.modal .resultContainer .firstHalf .second_row div img {
+  width: 30px;
+  height: 30px;
+  filter: drop-shadow(5px 4px 3px rgba(26, 3, 3, 0.686));
+}
+
+.modal .resultContainer .secondHalf {
+  padding-bottom: 8px;
+  overflow-y: auto;
+}
+
+.modal .resultContainer .secondHalf .third_row {
+  margin: 20px 5px;
+}
+
+.modal .resultContainer .secondHalf .third_row .hourBoxContainer {
+  display: flex;
+  overflow-x: auto;
+
+  margin-bottom: 5px;
+  scroll-behavior: smooth;
+}
+
+.modal .resultContainer .secondHalf .third_row .hourCounter {
+  background-color: #e9d2aa;
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.35s;
+  color: #00153b;
+}
+
+.modal .resultContainer .secondHalf .third_row .hourCounter:hover {
+  box-shadow: inset 0 0 3px rgba(38, 15, 15, 0.568);
+}
+
+.modal .resultContainer .secondHalf .third_row .hourCounter img {
+  width: 50px;
+  filter: drop-shadow(5px 4px 3px rgba(26, 3, 3, 0.686));
+}
+
+.modal .resultContainer .secondHalf .fourth-row {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 1px rgb(26 3 3 / 69%);
+  transform: all 0.35s;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.modal .resultContainer .secondHalf .fourth-row .forecastContainer:hover {
+  transform: scale(1.1);
+}
+
+.modal .resultContainer .secondHalf .fourth-row .forecastContainer {
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+}
+
+.modal .resultContainer .secondHalf .fourth-row .forecastContainer img {
+  width: 50px;
+  filter: drop-shadow(5px 4px 3px rgba(26, 3, 3, 0.686));
+}
+
+.modal .resultContainer .secondHalf .fourth-row .forecastContainer div {
+  display: flex;
+}
+
+::-webkit-scrollbar {
+  height: 6px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(244, 243, 238, 0.933);
+}
+
+::-webkit-scrollbar-thumb {
+  border-top-right-radius: 2px;
+  background: #a8543cdd;
+  box-shadow: 0 0 3px rgb(1, 28, 8);
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    justify-content: space-around;
+    align-items: last baseline;
+    gap: 30px;
+  }
+
+  header div .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  header div .app_name {
+    font-size: 2.8rem;
+  }
+
+  header .miniCardSection {
+    padding: 10px;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  section .mini_CardContainer .mini_Card {
+    width: 90px;
+    height: 65px;
+  }
+
+  section .mini_CardContainer .mini_Card:hover,
+  .modal .resultContainer .secondHalf .fourth-row .forecastContainer:hover {
+    transform: scale(1.1);
+  }
+
+  main .map_container {
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    width: 829px;
+  }
+
+  main .map_container .map {
+    object-fit: cover;
+    width: 87%;
+    height: 95%;
+  }
+
+  main .map_container .mapName {
+    font-size: 1.2rem;
+  }
+
+  main .map_container .provinces_name {
+    width: 70px;
+  }
+
+  main .map_container .box7 {
+    width: 116px;
+  }
+
+  main .map_container .box3 {
+    width: 95px;
+  }
+
+  main .map_container .trapani,
+  main .map_container .box1 {
+    top: calc(50% - 12%);
+    left: calc(50% - 328px);
+  }
+
+  main .map_container .palermo,
+  main .map_container .box2 {
+    top: calc(50% - 87px);
+    left: calc(50% - 150px);
+  }
+
+  main .map_container .agrigento,
+  main .map_container .box3 {
+    top: calc(50% - -58px);
+    left: calc(50% - 145px);
+  }
+
+  main .map_container .messina,
+  main .map_container .box4 {
+    top: calc(50% - 125px);
+    right: calc(50% - 215px);
+  }
+
+  main .map_container .catania,
+  main .map_container .box5 {
+    top: calc(50% - -33px);
+    right: calc(50% - 217px);
+  }
+
+  main .map_container .enna,
+  main .map_container .box6 {
+    top: calc(50% - 15px);
+    right: calc(50% - 103px);
+  }
+
+  main .map_container .caltanissetta,
+  main .map_container .box7 {
+    top: calc(50% - -12px);
+    right: calc(50% - 38px);
+  }
+
+  main .map_container .siracusa,
+  main .map_container .box8 {
+    bottom: calc(50% - 165px);
+    right: calc(50% - 260px);
+  }
+
+  main .map_container .ragusa,
+  main .map_container .box9 {
+    bottom: calc(50% - 210px);
+    right: calc(50% - 160px);
+  }
+
+  .touristIconContainer {
+    bottom: 245px;
+    width: 210px;
+    height: 230px;
+  }
+
+  .quoteContainer {
+    left: 205px;
+    bottom: 233px;
+    justify-content: end;
+  }
+}
+
+@media screen and (min-width: 1390px) {
+  .touristIconContainer {
+    bottom: 245px;
+    width: 210px;
+    height: 230px;
+  }
+
+  .quoteContainer {
+    left: 184px;
+    bottom: 335px;
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 75%,
+      42% 75%,
+      11% 100%,
+      20% 75%,
+      0% 75%
+    );
+    justify-content: start;
+  }
+}

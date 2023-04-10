@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SicilyWeather</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img class="logo" src="./img/logo2.png" alt="" />
+        <h1 class="app_name">SicilyWeather</h1>
+      </div>
+      <section class="miniCardSection"></section>
+    </header>
+    <main>
+      <section class="map_container">
+        <img class="map" src="./img/map1.png" alt="Map of Sicily" />
+        <div class="provinces_name box1"></div>
+        <h3 class="trapani mapName">Trapani</h3>
+        <div class="provinces_name box2"></div>
+        <h3 class="palermo mapName">Palermo</h3>
+        <div class="provinces_name box3"></div>
+        <h3 class="agrigento mapName">Agrigento</h3>
+        <div class="provinces_name box4"></div>
+        <h3 class="messina mapName">Messina</h3>
+        <div class="provinces_name box5"></div>
+        <h3 class="catania mapName">Catania</h3>
+        <div class="provinces_name box6"></div>
+        <h3 class="enna mapName">Enna</h3>
+        <div class="provinces_name box7"></div>
+        <h3 class="caltanissetta mapName">Caltanissetta</h3>
+        <div class="provinces_name box8"></div>
+        <h3 class="siracusa mapName">Siracusa</h3>
+        <div class="provinces_name box9"></div>
+        <h3 class="ragusa mapName">Ragusa</h3>
+      </section>
+      <section class="search_section">
+        <div class="touristIconContainer">
+          <img src="./img/tourist.png" alt="tourist icon" />
+        </div>
+        <div class="quoteContainer">
+          <p>Select the city you are interested in!</p>
+          <form id="form">
+            <select class="selectContainer" id="sectionForm">
+              <option value="2525764">Agrigento</option>
+              <option value="2525448">Caltanissetta</option>
+              <option value="2525068">Catania</option>
+              <option value="2524819">Enna</option>
+              <option value="2524170">Messina</option>
+              <option value="2523920">Palermo</option>
+              <option value="2523650">Ragusa</option>
+              <option value="2523083">Siracusa</option>
+              <option value="6542155">Trapani</option>
+            </select>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div class="modal active">
+      <div class="overlay"></div>
+      <div class="resultContainer">
+        <div class="firstHalf"></div>
+        <div class="secondHalf"></div>
+      </div>
+    </div>
+  </body>
+</html>
